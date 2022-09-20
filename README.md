@@ -16,7 +16,7 @@ IMPORTANTE!
 * E demais atividade desenvolvidas em sala de aula.
 
 - Sprint 4 - 08/09 - Concluída
-- Sprint 5 - 12/10;
+- Sprint 5 - 19/10;
 - Sprint 6 - 07/12;
 
 Att, Team 10.

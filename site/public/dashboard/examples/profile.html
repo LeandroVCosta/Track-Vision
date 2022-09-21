@@ -151,16 +151,16 @@
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-first-name">Primeiro nome</label>
-                      <input type="text" id="inputFirstName" class="form-control form-control-alternative"
-                        placeholder="First name" value="Fernando" disabled>
+                      <label class="form-control-label" for="input-first-name">Empresa</label>
+                      <input type="text" id="inputFirstCompany" class="form-control form-control-alternative"
+                        placeholder="First name" value="Santander" disabled>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-last-name">Último nome</label>
-                      <input type="text" id="inputLastName" class="form-control form-control-alternative"
-                        placeholder="Last name" value="Brandão" disabled>
+                      <label class="form-control-label" for="input-last-name">Cargo</label>
+                      <input type="text" id="inputLastRole" class="form-control form-control-alternative"
+                        placeholder="Last name" value="Gerente" disabled>
                     </div>
                   </div>
                 </div>
@@ -195,8 +195,7 @@
   function editar_input() {
     inputUsername.disabled = false
     inputEmail.disabled = false
-    inputFirstName.disabled = false
-    inputLastName.disabled = false
+    inputFirstCompany.disabled = false
 
     editar_perfil.style.display = "none";
     cancelar_perfil.style.display = "inline";
@@ -207,7 +206,6 @@
     inputUsername.disabled = true
     inputEmail.disabled = true
     inputFirstName.disabled = true
-    inputLastName.disabled = true
 
     editar_perfil.style.display = "inline";
     cancelar_perfil.style.display = "none";

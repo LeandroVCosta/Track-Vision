@@ -8,7 +8,7 @@ import platform
 
 try:
     conn = mysql.connector.connect(
-        host='localhost', user='root', password='#Gf44844181858', database='trackvision')
+        host='localhost', user='aluno', password='sptech', database='trackvision')
     print("Conexão ao banco estabelecida!")
 except:
     print("Houve um erro ao conectar-se ao banco.")
@@ -25,6 +25,7 @@ cursor = conn.cursor()
 inicioSegundos = 0
 
 while True:
+    cont_maquina = 0
     cpuPercent = psutil.cpu_percent(interval=1, percpu=False)
     ramPorcentagem = psutil.virtual_memory().percent
     discoUsado = psutil.disk_usage("C:\\").percent
@@ -50,6 +51,7 @@ while True:
     ]
 
     for computador in maquinas:
+        cont_maquina += 1
         sql = "INSERT INTO leitura (fkCaixa, fkUsuario, processadorPorcentagem, memoriaRAM, disco, ultimaLeitura) VALUES (%s, %s, %s, %s, %s, (SELECT Now()))"
         values = [computador[0], fkUsuario,
                   computador[1], computador[2], computador[3]]
@@ -58,6 +60,7 @@ while True:
         sopera = platform.system()
 
         print("-"*30)
+        print("Medida do Computador", cont_maquina)
         print(ultimaLeitura)
         print("Sistema operacional utilizado: ", sopera)
         inicioSegundos += 1
